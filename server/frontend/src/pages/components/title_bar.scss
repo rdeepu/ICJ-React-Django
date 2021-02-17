@@ -1,0 +1,29 @@
+//Display settings
+
+
+@mixin disp{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+.titlebox{
+    @include disp;
+    left:0em;
+    background-color: rgb(0, 162, 255);
+    height: 7em;
+    width: 100%;
+    .name_logo {
+       position: absolute;
+       align-self:flex-start;
+       margin: 0.5em 0em 0em 0.1em;
+       width:41em;
+    }
+    .symbol_logo{
+       position: relative;
+       align-self: flex-end;
+       margin:0.4em 0.1em 0em 0em;
+       width:6.5em;
+    }
+    
+}
+

@@ -1,0 +1,34 @@
+.fnt_slct {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0em;
+  top: 3.5em;
+  text-align: center;
+  z-index: 1;
+}
+
+.fnt_slct .fnt_list {
+  display: none;
+}
+
+.fnt_slct:hover {
+  cursor: pointer;
+}
+
+.fnt_slct:hover .fnt_list {
+  cursor: pointer;
+  display: block;
+}
+
+h3:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+/*# sourceMappingURL=fnt_sze.css.map */

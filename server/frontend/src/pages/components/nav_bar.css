@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+.navbar_en {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 4em;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 7.1em;
+  left: 0em;
+  border-radius: 30px;
+  font-family: 'Tangerine',cursive;
+}
+
+.navbar_en ul {
+  list-style-type: none;
+  font-size: 38px;
+  margin: 0.25em 0.4em 0em 0em;
+}
+
+.navbar_en ul a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar_en ul li {
+  float: left;
+  padding: 0px 7px 0px 7px;
+}
+
+.navbar_en ul li:last-child {
+  float: right;
+}
+
+.navbar_en ul li:hover {
+  border-bottom: 4px solid red;
+  cursor: pointer;
+}
+
+.navbar_en ul .lang_sel {
+  width: 0.75em;
+}
+
+.navbar_en ul .icn {
+  font-size: 1.2em;
+}
+
+.navbar_de {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 4em;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 7.1em;
+  left: 0em;
+  border-radius: 30px;
+  font-family: 'Tangerine',cursive;
+}
+
+.navbar_de ul {
+  list-style-type: none;
+  font-size: 38px;
+  margin: 0.25em 0.4em 0em 0em;
+}
+
+.navbar_de ul a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar_de ul li {
+  float: left;
+  padding: 0px 7px 0px 7px;
+}
+
+.navbar_de ul li:last-child {
+  float: right;
+}
+
+.navbar_de ul li:hover {
+  border-bottom: 4px solid red;
+  cursor: pointer;
+}
+
+.navbar_de ul .lang_sel {
+  width: 0.75em;
+}
+
+.navbar_de ul .icn {
+  font-size: 1.2em;
+}
+
+.active {
+  border-bottom: 4px solid red;
+}
+/*# sourceMappingURL=nav_bar.css.map */

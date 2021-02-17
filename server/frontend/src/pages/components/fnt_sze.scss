@@ -1,0 +1,26 @@
+
+.fnt_slct{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right:0em;
+    top:3.5em;
+    text-align: center;
+    z-index: 1;
+    .fnt_list{
+        display: none;        
+    }
+}
+.fnt_slct:hover{
+    cursor: pointer;
+}
+.fnt_slct:hover .fnt_list{
+    cursor: pointer;
+    display: block;
+}
+h3:hover{
+    cursor: pointer;
+    background-color: black;
+    color:white;
+    
+}

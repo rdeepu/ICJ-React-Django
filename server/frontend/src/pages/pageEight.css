@@ -1,0 +1,68 @@
+.txt_box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Times New Roman';
+  margin: 12em 0em 0em 0em;
+  width: 70em;
+  height: 40em;
+  justify-self: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.txt_box h1 {
+  margin: 2em 0em 0em 1em;
+}
+
+.txt_box hr {
+  position: relative;
+  margin: 1em 0em 0em 0em;
+  width: 100%;
+}
+
+.txt_box p {
+  position: relative;
+  margin: 0em 0em 0em 2em;
+}
+
+.txt_box form {
+  position: absolute;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 8em 2em 0em 0em;
+}
+
+.txt_box form .qry {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 2px;
+  height: 30px;
+  width: 30em;
+}
+
+.txt_box form .qry_cont {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 2px;
+  height: 100px;
+  width: 30em;
+  word-wrap: break-word;
+}
+
+.txt_box form .qry_submit {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 2px;
+  height: 30px;
+  width: 15em;
+}
+/*# sourceMappingURL=pageEight.css.map */

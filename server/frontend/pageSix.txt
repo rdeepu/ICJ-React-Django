@@ -1,0 +1,136 @@
+import * as React from 'react'
+import './pageSix.css'
+import Title from './components/title_bar'
+import Navbar from './components/nav_bar'
+import Font from './components/fnt_sze'
+
+
+export default function  Organization(){
+
+    let DefaultLang:string;
+
+    let StoreLang:any = localStorage.getItem('LangSel');
+  
+    if (StoreLang === 'DE') {
+
+    DefaultLang = 'DE'
+
+    } else  {
+
+     DefaultLang='EN'
+     
+    }  
+
+const [Lang,SetLang]=React.useState(DefaultLang)
+
+let LangEN,LangDE,grd_LangEN,grd_LangDE;
+
+if(Lang === 'EN'){
+    LangEN = 'block'
+    LangDE = 'none'
+    grd_LangEN='grid'
+    grd_LangDE='none'
+} else if (Lang === 'DE'){
+    LangDE='block'
+    LangEN='none'
+    grd_LangDE='grid'
+    grd_LangEN='none'
+}
+
+const [Fntsze,SetFntsze]=React.useState(20)
+
+
+    return(
+       
+        <div>
+
+            <Title/>
+
+            <Navbar onUpdate = {(value:string) => SetLang(value)} pg_Organization = '4px solid red' />
+
+            <div className='txt_box'>
+
+                <h1 style={{display:LangEN}}>Organization</h1>
+                <h1 style={{display:LangDE}}>Organisation</h1>
+
+                <Font fntSlct={(sze:number)=>SetFntsze(sze)} LangEN={LangEN} LangDE={LangDE}/>
+
+                <hr className='hr_a'></hr>
+
+                <p style={{display:LangEN,fontSize:Fntsze}}>The governing body consists of:</p>
+                <p style={{display:LangDE,fontSize:Fntsze}}>Der Vorstand besteht aus:</p>
+
+                <div className = 'grd_cont_org' style={{fontSize:Fntsze, display:grd_LangEN}} >
+
+                    <div>Ms. Myriam Woischnick-De Buck</div>
+                    <div>President</div> 
+
+                    <div>Mr. Rolf Skowronek</div>
+                    <div>Vice-President</div> 
+
+                    <div>Ms. Helga Neulen</div>
+                    <div>Treasurer</div> 
+
+                    <div>Ms. Rajalekshmi Deepu</div>
+                    <div>Secretary</div> 
+
+                    <div>Ms. Lorraine Buchner</div>
+                    <div>Committee member</div> 
+
+                    <div>Ms. Nathalia Faley</div>
+                    <div>Committee member</div> 
+
+                    <div>Ms. Brunhilde Hütten</div>
+                    <div>Committee member</div> 
+
+                    <div>Ms. Barbara Kobertz</div>
+                    <div>Committee member</div> 
+
+                    <div>Ms. Karina Minkenberg</div>
+                    <div>Committee member</div> 
+
+                    <div>Mr. Georg Neulen</div>
+                    <div>Committee member</div> 
+            
+                </div>
+
+                <div className = 'grd_cont_org' style={{fontSize:Fntsze, display:grd_LangDE}} >
+
+                    <div>Frau Myriam Woischnick-De Buck</div>
+                    <div>Präsident</div> 
+
+                    <div>Herr Rolf Skowronek</div>
+                    <div>Vize-Präsident</div> 
+
+                    <div>Frau Helga Neulen</div>
+                    <div>Schatzmeister </div> 
+
+                    <div>Frau Rajalekshmi Deepu</div>
+                    <div>Schriftführer</div> 
+
+                    <div>Frau Lorraine Buchner</div>
+                    <div>Beisitzer</div> 
+
+                    <div>Frau Nathalia Faley</div>
+                    <div>Beisitzer</div> 
+
+                    <div>Frau Brunhilde Hütten</div>
+                    <div>Beisitzer</div> 
+
+                    <div>Frau Barbara Kobertz</div>
+                    <div>Beisitzer</div> 
+
+                    <div>Frau Karina Minkenberg</div>
+                    <div>Beisitzer</div> 
+
+                    <div>Herr Georg Neulen</div>
+                    <div>Beisitzer</div> 
+                </div>
+
+                <hr className = 'hr_b'></hr>
+
+            </div>
+
+        </div>
+    )
+}

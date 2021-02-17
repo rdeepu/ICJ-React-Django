@@ -1,0 +1,51 @@
+@mixin disp{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    font-family: 'Times New Roman';
+}
+
+.txt_box{
+    @include disp;
+    margin:12em 0em 0em 0em;
+    width:70em;
+    height:40em;
+    justify-self: center;
+    background-color:rgba(255,255,255,0.8); 
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .h1_a{
+        margin:2em 0em 0em 1em;
+    }
+    hr{
+        position: relative;
+        margin:1em 0em 0em 0em;
+        width:100%;        
+    }
+    p{
+        position: relative;
+        margin:1em 4em 0em 4em;
+        line-height: 1.5;
+        text-align: justify;
+    }
+    .h1_b{
+        position: relative;
+        margin:2em 0em 0em 1em;
+    }
+    .grd_cont_history{
+        position: relative;
+        margin-top:1em;
+        display: grid;
+        text-align: center;
+        line-height:2;
+        width:100%;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: 50px;
+        gap: 10px;
+    }
+    .grd_cont_history > div{
+        background-color: white;
+    }   
+
+} 

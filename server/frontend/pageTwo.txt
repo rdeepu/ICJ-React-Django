@@ -1,0 +1,87 @@
+import * as React from 'react'
+import Title from './components/title_bar'
+import Navbar from './components/nav_bar'
+import Font from './components/fnt_sze'
+import './pageTwo.css'
+
+export default function Objectives(){
+
+let DefaultLang:string;
+
+let StoreLang:any = localStorage.getItem('LangSel');
+  
+    if (StoreLang === 'DE') {
+
+    DefaultLang = 'DE'
+
+    } else  {
+
+     DefaultLang='EN'
+     
+    } 
+   
+  
+
+    const [Lang,SetLang] = React.useState(DefaultLang);
+
+    let LangEN,LangDE;
+
+    if(Lang === 'EN'){
+        LangEN = 'block'
+        LangDE = 'none'
+    } else if (Lang === 'DE'){
+        LangDE='block'
+        LangEN='none'
+    }
+
+    const [Fntsze,SetFntsze]=React.useState(20)
+
+return(
+    <div>
+        <Title/>
+
+        <Navbar onUpdate = {(value:string) => SetLang(value)} pg_Objectives='4px solid red' />
+
+        <div className='txt_box'>
+            <h1 style={{display:LangEN}}>Objective and purpose</h1>
+            <h1 style={{display:LangDE}}>Zweck und ziel</h1>
+
+            <Font fntSlct={(sze:number)=>SetFntsze(sze)} LangEN={LangEN} LangDE={LangDE}/>
+            
+            <hr></hr>
+
+            <p style={{display:LangEN, fontSize:Fntsze}}><b>The purpose of the club is:</b>
+                <ul>
+                    <li>to encourage contact between the international workforce of the research center 
+                       (Forschungszentrum Jülich GmbH) and the residents of Juelich,  to organisations of the same type, 
+                       both at home and abroad. </li>
+                     <li>to provide assistance to all club members. </li>
+                </ul>
+               To this end, the club will organise informative, cultural and social gatherings to
+               lead people towards thoughts of tolerance and understanding.
+
+               The club's exclusive and immediate purpose is to benifit the community (im Sinne der 
+               Gemeinnützigkeitsverordnung vom 24. Dezember, 1953).
+            </p>
+            <p style={{display:LangDE,fontSize:Fntsze}}><b>Der Club hat die Aufgaben:</b>
+                <ul>
+                    <li>den Kontakt der in- und ausländischen Mitglieder untereinander, zur Jülicher Bevölkerung
+                         sowie zu in- und ausländischen Organisationen gleicher Art zu pflegen,</li>
+
+                    <li>das Einleben der Ausländer, die in Jülich tätig sind, zu fördern.</li>
+                </ul>
+                Zu diesem Zweck wird der Club insbesondere Veranstaltungen informativer, kultureller und 
+                gesellschaftlicher Art durchführen. Seine Tätigkeit soll dem Gedanken der Toleranz und 
+                Völkerverständigung dienen.
+ 
+                Der Club verfolgt ausschließlich und unmittelbar gemeinnützige Zwecke  im Sinne der 
+                Gemeinnützigkeitsverordnung vom 24. Dezember 1953.
+            </p>
+
+        </div>
+
+    </div>
+
+)
+
+}

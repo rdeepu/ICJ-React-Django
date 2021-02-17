@@ -1,0 +1,29 @@
+@mixin disp{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    font-family: 'Times New Roman';
+}
+.txt_box{
+    @include disp;
+    margin:12em 0em 0em 0em;
+    width:70em;
+    height:40em;
+    justify-self: center;
+    background-color:rgba(255,255,255,0.8); 
+    border-radius: 10px; 
+    h1{
+        margin:2em 0em 0em 1em;
+    }
+    hr{
+        position:relative;
+        width:100%;
+        margin-top:1em;
+    }
+    p{
+        position: relative;
+        margin:1em 3em 0em 3em;
+        line-height: 1.5;
+    }
+    
+}

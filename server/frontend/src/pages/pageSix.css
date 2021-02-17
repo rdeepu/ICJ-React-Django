@@ -1,0 +1,68 @@
+.txt_box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Times New Roman';
+  margin: 12em 0em 0em 0em;
+  width: 70em;
+  height: 40em;
+  justify-self: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.txt_box h1 {
+  margin: 2em 0em 0em 1em;
+}
+
+.txt_box hr {
+  position: relative;
+  margin: 1em 0em 0em 0em;
+  width: 100%;
+}
+
+.txt_box .para_a {
+  position: relative;
+  margin: 2em 0em 0em 5em;
+}
+
+.txt_box .grd_cont_imprint {
+  position: relative;
+  margin: 2em 0em 0em 1.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  line-height: 2;
+  width: 70%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+      grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  gap: 10px;
+}
+
+.txt_box .grd_cont_imprint > div {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.txt_box .para_b {
+  position: relative;
+  margin: 2em 0em 0em 6em;
+  line-height: 1.5em;
+}
+
+.txt_box .para_c {
+  position: relative;
+  text-align: center;
+}
+/*# sourceMappingURL=pageSix.css.map */

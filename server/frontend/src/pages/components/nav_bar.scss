@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+//Display Settings
+
+$corner: 30px;
+
+@mixin disp{
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+}
+@mixin navbar{
+    @include disp;   
+    width:100%;
+    height:4em;
+    background-color:rgba(255,255,255,0.8);
+    top:7.1em;
+    left:0em;
+    border-radius: $corner;
+    font-family: 'Tangerine',cursive;
+    ul {
+        list-style-type: none;
+        font-size:38px;
+        margin:0.25em 0.4em 0em 0em;          
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        li{           
+            float: left;
+            padding:0px 7px 0px 7px;
+        }
+        li:last-child{
+             float: right;
+         }
+        li:hover{
+             border-bottom: 4px solid red;
+             cursor: pointer;
+         }
+        .lang_sel{
+             width: 0.75em;
+        } 
+        .icn{
+            font-size: 1.2em;
+        }        
+     }
+}
+.navbar_en{
+    @include navbar;
+   
+ }
+.navbar_de{
+    @include navbar;
+}
+.active{
+    border-bottom: 4px solid red;
+}

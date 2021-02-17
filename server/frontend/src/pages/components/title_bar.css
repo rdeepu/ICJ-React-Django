@@ -1,0 +1,31 @@
+.titlebox {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 0em;
+  background-color: #00a2ff;
+  height: 7em;
+  width: 100%;
+}
+
+.titlebox .name_logo {
+  position: absolute;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0.5em 0em 0em 0.1em;
+  width: 41em;
+}
+
+.titlebox .symbol_logo {
+  position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0.4em 0.1em 0em 0em;
+  width: 6.5em;
+}
+/*# sourceMappingURL=title_bar.css.map */
