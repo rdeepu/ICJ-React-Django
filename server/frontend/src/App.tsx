@@ -14,7 +14,7 @@ export default function App (){
 
     return (       
         <div className = "cont"> 
-          <History/>         
+          <Activities/>         
         </div>       
     );  
 }

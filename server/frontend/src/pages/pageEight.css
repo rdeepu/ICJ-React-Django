@@ -28,41 +28,57 @@
 
 .txt_box p {
   position: relative;
-  margin: 0em 0em 0em 2em;
+  margin: 0em 0em 0em 1.5em;
 }
 
 .txt_box form {
   position: absolute;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin: 8em 2em 0em 0em;
+  margin: 7em 6em 0em 0em;
 }
 
 .txt_box form .qry {
-  border-radius: 10px;
-  border: 1px solid black;
-  padding: 5px;
-  margin: 2px;
+  border-radius: 5px;
+  border: 3px solid blue;
+  padding: 3px;
+  margin: 3px;
+  width: 30rem;
+  border: 2px solid black;
+  background-color: whitesmoke;
   height: 30px;
-  width: 30em;
 }
 
 .txt_box form .qry_cont {
-  border-radius: 10px;
-  border: 1px solid black;
-  padding: 5px;
-  margin: 2px;
+  border-radius: 5px;
+  border: 3px solid blue;
+  padding: 3px;
+  margin: 3px;
+  width: 30rem;
+  border: 2px solid black;
+  background-color: whitesmoke;
   height: 100px;
-  width: 30em;
   word-wrap: break-word;
+  overflow-y: scroll;
 }
 
 .txt_box form .qry_submit {
-  border-radius: 10px;
-  border: 1px solid black;
-  padding: 5px;
-  margin: 2px;
-  height: 30px;
-  width: 15em;
+  border-radius: 5px;
+  border: 3px solid blue;
+  padding: 3px;
+  margin: 3px;
+  width: 30rem;
+  border: 2px solid black;
+  background-color: whitesmoke;
+  height: 40px;
+  width: 10em;
+}
+
+.txt_box form textarea {
+  resize: none;
+}
+
+.txt_box form .qry_submit:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=pageEight.css.map */

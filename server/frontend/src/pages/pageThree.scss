@@ -1,10 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
 @mixin disp{
     position:relative;
     display:flex;
-    flex-direction: column;
-    font-family: 'Times New Roman';
+    flex-direction:column;    
 }
-
+@mixin navbar{
+    color:white;
+    background-color: rgb(67, 64, 224);
+    font-size:40px;
+    font-family:'Tangerine',cursive;
+    width:100%;
+    height:1.2em;    
+    list-style-type: none;
+    margin:0.2em 0em 0em 0em;      
+}
 .txt_box{
     @include disp;
     margin:12em 0em 0em 0em;
@@ -14,17 +24,101 @@
     background-color:rgba(255,255,255,0.8); 
     border-radius: 10px;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: hidden; 
+    font-family: 'Times New Roman'; 
+          
     h1{
-        margin:2em 0em 0em 1em;
+        margin:2em 0em 0em 3em;
     }
     .hr_a{
         position:relative;
         width:100%;
         margin:1em 0em 0em 0em;
     }
-    ul{
-        align-self: center;
+    .navbar{
+        @include navbar;
+        ul{
+            align-self:flex-start;
+            margin: 1em 0em 0em 2em;                       
+        }
+        li{
+            float:left;
+            padding:0px 25px 0px 25px;
+        }
+        li:hover{
+            cursor: pointer;
+            color:rgb(67, 64, 224);
+            background:white;
+        }        
+        .select{
+            color:rgb(67, 64, 224);
+            background:white
+        }        
+        .unselect{
+            color:white;
+            background-color: rgb(67, 64, 224);
+        } 
+    } 
+    .textDisplay{
+        @include disp;
+        font-family: 'Times New Roman';
+        margin: 2em 2em 0em 4em;
     }  
-   
+    .banner{
+        @include disp;     
+        width:100%;
+        background-image: linear-gradient(to right, rgba(0,0,255,0.9),rgba(255,255,255,0)) ;
+        height:8em;
+        border-radius:10px;
+        color: white;        
+    }
+    .img_pos{
+        @include disp; 
+        width:90%;
+        height:auto;
+    }
+    button{
+     color:white;
+     background-color: blue;
+     border-radius: 10px;
+     border:1px turquoise solid;
+    }
+    button:hover{
+      cursor: pointer;
+      scale: 1.05;
+    }
+    .navButtons{           
+        ul{
+            align-self: center;
+            color:white;
+            background-color: rgb(67, 64, 224);      
+            width:24.5em;
+            height:1.5em;
+            font-size:25px;
+            list-style-type: none;
+            border-radius: 20px; 
+            li{
+                float:left;
+                padding:0px 20px 0px 15px;
+                border-right: 1.5px solid white;
+                border-left:1.5px solid white; 
+            }
+            li:hover{
+                cursor: pointer;
+                color:rgb(67, 64, 224);
+                background:white;
+            }
+            .select{
+                color:rgb(67, 64, 224);
+                background:white
+            }        
+            .unselect{
+                color:white;
+                background-color: rgb(67, 64, 224);
+            } 
+                   
+        }            
+              
+    }
+    
 }

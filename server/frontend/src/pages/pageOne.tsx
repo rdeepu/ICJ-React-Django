@@ -105,7 +105,7 @@ export default function Home() {
           <img
             className="photobox_img_a"
             src = {data.image}
-            alt="Pancake Tuesday Celebrations"
+            alt="Photos"
           />
           <figcaption className="img_capt" style={{ display: varENG }}>
             {data.img_description_EN}

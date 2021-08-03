@@ -3,10 +3,12 @@ import './pageFive.css'
 import Title from './components/title_bar'
 import Navbar from './components/nav_bar'
 import Font from './components/fnt_sze'
-import {useSelector} from 'react-redux';
-import {langStatus} from './components/redux';
+import {useSelector} from 'react-redux'
+import {langStatus} from './components/redux'
+import {useState,useEffect} from 'react'
+import axios from 'axios'
 
-export default function  Organization(){
+export default function Organization(){
 
     let varENG:string,varDEU:string,grd_varENG:string,grd_varDEU:string
 
@@ -15,15 +17,33 @@ export default function  Organization(){
   
    if (slctdLang === 'ENG'){
       varENG = 'block'
-      varDEU='none' 
-      grd_varENG='grid' 
-      grd_varDEU='none'     
+      varDEU = 'none' 
+      grd_varENG = 'grid' 
+      grd_varDEU = 'none'     
     } else {
       varENG = 'none'
-      varDEU='block' 
-      grd_varDEU='grid'
-      grd_varENG='none'   
+      varDEU = 'block' 
+      grd_varDEU = 'grid'
+      grd_varENG = 'none'   
    }  
+
+   const [State_organization, setState_organization] = useState([])
+
+   useEffect(() => {
+
+    fetchData()     
+    
+  },[]) 
+
+   function fetchData(){
+
+    axios.all([
+        axios.get("organization_api")
+    ]).then((retrieve) => { 
+        setState_organization(retrieve[0].data)
+    })
+   }
+
 
     return(
        
@@ -44,73 +64,19 @@ export default function  Organization(){
 
                 <p style={{display:varENG,fontSize:slctdFont}}>The governing body consists of:</p>
                 <p style={{display:varDEU,fontSize:slctdFont}}>Der Vorstand besteht aus:</p>
+               
+                {State_organization.map((data:any) => (
+                
+                <div className = 'grd_cont_org' style={{fontSize:slctdFont}}>               
 
-                <div className = 'grd_cont_org' style={{fontSize:slctdFont, display:grd_varENG}} >
-
-                    <div>Ms. Myriam Woischnick-De Buck</div>
-                    <div>President</div> 
-
-                    <div>Mr. Rolf Skowronek</div>
-                    <div>Vice-President</div> 
-
-                    <div>Ms. Helga Neulen</div>
-                    <div>Treasurer</div> 
-
-                    <div>Ms. Rajalekshmi Deepu</div>
-                    <div>Secretary</div> 
-
-                    <div>Ms. Lorraine Buchner</div>
-                    <div>Committee member</div> 
-
-                    <div>Ms. Nathalia Faley</div>
-                    <div>Committee member</div> 
-
-                    <div>Ms. Brunhilde Hütten</div>
-                    <div>Committee member</div> 
-
-                    <div>Ms. Barbara Kobertz</div>
-                    <div>Committee member</div> 
-
-                    <div>Ms. Karina Minkenberg</div>
-                    <div>Committee member</div> 
-
-                    <div>Mr. Georg Neulen</div>
-                    <div>Committee member</div> 
-            
+                    <div style={{display:varENG}}>{data.personName_EN}</div>
+                    <div style={{display:varENG}}>{data.positionHeld_EN}</div> 
+                    <div style={{display:varDEU}}>{data.personName_DE}</div>
+                    <div style={{display:varDEU}}>{data.positionHeld_DE}</div>                     
+                   
                 </div>
-
-                <div className = 'grd_cont_org' style={{fontSize:slctdFont, display:grd_varDEU}} >
-
-                    <div>Frau Myriam Woischnick-De Buck</div>
-                    <div>Präsident</div> 
-
-                    <div>Herr Rolf Skowronek</div>
-                    <div>Vize-Präsident</div> 
-
-                    <div>Frau Helga Neulen</div>
-                    <div>Schatzmeister </div> 
-
-                    <div>Frau Rajalekshmi Deepu</div>
-                    <div>Schriftführer</div> 
-
-                    <div>Frau Lorraine Buchner</div>
-                    <div>Beisitzer</div> 
-
-                    <div>Frau Nathalia Faley</div>
-                    <div>Beisitzer</div> 
-
-                    <div>Frau Brunhilde Hütten</div>
-                    <div>Beisitzer</div> 
-
-                    <div>Frau Barbara Kobertz</div>
-                    <div>Beisitzer</div> 
-
-                    <div>Frau Karina Minkenberg</div>
-                    <div>Beisitzer</div> 
-
-                    <div>Herr Georg Neulen</div>
-                    <div>Beisitzer</div> 
-                </div>
+                               
+                      ))}            
 
                 <hr className = 'hr_b'></hr>
 

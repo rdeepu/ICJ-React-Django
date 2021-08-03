@@ -5,12 +5,14 @@
     font-family: 'Times New Roman';
     }
 @mixin qry{   
-    border-radius:10px;
-    border:1px solid black;
-    padding:5px;
-    margin:2px;
-   }
-
+    border-radius:5px;
+    border:3px solid blue;
+    padding:3px;
+    margin:3px;
+    width:30rem;
+    border: 2px solid black;
+    background-color:whitesmoke;
+   }  
 
 .txt_box{
     @include disp;
@@ -19,7 +21,7 @@
     height:40em;
     justify-self: center;
     background-color:rgba(255,255,255,0.8); 
-    border-radius: 10px;
+    border-radius: 10px;    
     h1{
         margin:2em 0em 0em 1em;
     }
@@ -30,27 +32,32 @@
     }
     p{
         position:relative;
-        margin:0em 0em 0em 2em;        
+        margin:0em 0em 0em 1.5em;        
     }
     form {
         position:absolute;
         align-self: flex-end;
-        margin:8em 2em 0em 0em;        
+        margin:7em 6em 0em 0em;        
         .qry{
             @include qry;
-            height:30px;  
-            width:30em;        
+            height:30px;
         }
         .qry_cont{
             @include qry;
             height:100px;
-            width:30em; 
-            word-wrap: break-word;           
+            word-wrap:break-word; 
+            overflow-y: scroll; 
         }
         .qry_submit{
             @include qry;
-            height:30px;
-            width: 15em;
+            height:40px;
+            width: 10em;                        
+        }
+        textarea {
+            resize: none
+        }
+        .qry_submit:hover{
+            cursor: pointer;
         }
     }
 }

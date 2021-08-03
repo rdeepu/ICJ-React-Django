@@ -41,13 +41,14 @@
   -ms-grid-row-align: center;
       align-self: center;
   text-align: center;
-  line-height: 2;
+  line-height: 2em;
   width: 70%;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
-  -ms-grid-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-      grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-  gap: 10px;
+  -ms-grid-rows: 50px;
+      grid-template-rows: 50px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .txt_box .grd_cont_org > div {
@@ -58,6 +59,6 @@
 .txt_box .hr_b {
   position: relative;
   width: 100%;
-  margin: 1em 0em 0em 0em;
+  margin: 3em 0em 0em 0em;
 }
 /*# sourceMappingURL=pageFive.css.map */

@@ -25,8 +25,22 @@
     p{  
         position: relative;       
         margin:1em 2em 0em 4em;
-    }
-   
+        button{
+            border-radius:10px;
+            height:2em;
+            background-color: darkblue;
+            color:white;
+            border:3px solid white;
+        }
+        button:hover{
+            cursor: pointer;
+        }
 
+    }
+    .hr_b{
+        position:relative;
+        margin:1em 0em 0em 0em;
+        width:100%;        
+    }  
 
 }

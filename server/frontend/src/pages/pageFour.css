@@ -32,4 +32,22 @@
   position: relative;
   margin: 1em 2em 0em 4em;
 }
+
+.txt_box p button {
+  border-radius: 10px;
+  height: 2em;
+  background-color: darkblue;
+  color: white;
+  border: 3px solid white;
+}
+
+.txt_box p button:hover {
+  cursor: pointer;
+}
+
+.txt_box .hr_b {
+  position: relative;
+  margin: 1em 0em 0em 0em;
+  width: 100%;
+}
 /*# sourceMappingURL=pageFour.css.map */
